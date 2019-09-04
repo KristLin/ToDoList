@@ -6,7 +6,7 @@
   <title>To Do List</title>
 
   <link rel="stylesheet" href="public/css/style.css">
-</head>
+</head
 
 <body>
 
@@ -18,18 +18,34 @@
     <div class="item">
       <input type="checkbox" name="" value="">
       <p>Workout</p>
+
+      <form class="item delete-form" action="localhost:3000/delete" method="post">
+        <input type="hidden" name="deleteItem" value="Workout">
+        <button class="delete-button" type="submit" name="button" value=>-</button>
+      </form>
     </div>
     <div class="item">
       <input type="checkbox" name="" value="">
       <p>Shopping</p>
+      <form class="item delete-form" action="http://localhost:3000/delete" method="post">
+        <input type="hidden" name="deleteItem" value="Shopping">
+        <button class="delete-button" type="submit" name="button" value=>-</button>
+      </form>
     </div>
 
-    <form class="item" action="/" method="post">
+    <form class="item" action="http://localhost:3000" method="post">
       <input type="text" name="newItem" placeholder="New Item" value="" autocomplete="false">
-      <button type="submit" name="button">+</button>
+      <button class="add-button" type="submit" name="button">+</button>
     </form>
   </div>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="/js/index.js" charset="utf-8"></script>
 
 </body>
 
 </html>
+
+<footer>
+  Made by Krist.
+</footer>

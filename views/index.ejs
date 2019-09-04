@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title>To Do List</title>
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include("header") -%>
 
 <body>
 
@@ -19,15 +11,26 @@
     <div class="item">
       <input type="checkbox" name="" value="">
       <p><%= things[i] %></p>
+
+      <form class="item delete-form" action="/delete" method="post">
+        <input type="hidden" name="deleteItem" value="<%= things[i] %>">
+        <button class="delete-button" type="submit" name="button" value=>-</button>
+      </form>
     </div>
     <% } %>
 
     <form class="item" action="/" method="post">
       <input type="text" name="newItem" placeholder="New Item" value="" autocomplete="false">
-      <button type="submit" name="button">+</button>
+      <button class="add-button" type="submit" name="button">+</button>
     </form>
   </div>
+
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="/js/index.js" charset="utf-8"></script>
 
 </body>
 
 </html>
+
+<%- include("footer") -%>

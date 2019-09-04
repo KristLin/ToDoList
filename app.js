@@ -15,7 +15,16 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
   let newItem = req.body.newItem;
-  things.push(newItem);
+  if (newItem) {
+    things.push(newItem);
+
+  }
+  res.render("index", {date: getDate(), things: things});
+});
+
+app.post("/delete", function(req, res) {
+  let deleteItem = req.body.deleteItem;
+  things.splice(things.indexOf(deleteItem), 1);
   res.render("index", {date: getDate(), things: things});
 });
 
