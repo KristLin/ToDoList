@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>To Do List</title>
 
-    <link rel="stylesheet" href="public/css/style.css">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
 
-    <div class="container">
-      <h1>"Todya is Saturday! Yeaaaah!"</h1>
-      <ul class="to-do-list">
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
 
-        <li class='list-item'>Workout</li>
-        <li class='list-item'>Shopping</li>
-      </ul>
-      <form class="submit" action="/" method="post">
-        <input type="text" name="newThing" placeholder="What to do..." value="">
-        <button type="submit" name="button">Add</button>
-      </form>
+<body>
+
+  <div class="box" id="heading">
+    <h1>Mon, Sep 04, 2019</h1>
+  </div>
+
+  <div class="box">
+    <div class="item">
+      <input type="checkbox" name="" value="">
+      <p>Workout</p>
+    </div>
+    <div class="item">
+      <input type="checkbox" name="" value="">
+      <p>Shopping</p>
     </div>
 
-  </body>
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" value="" autocomplete="false">
+      <button type="submit" name="button">+</button>
+    </form>
+  </div>
+
+</body>
+
 </html>
